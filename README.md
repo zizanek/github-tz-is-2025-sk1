@@ -2,3 +2,5 @@
 Repozitář pro účely cvičení předmětu IS (středa 8:50).
 
 Změna provedena na lokále (počítač v učebně H45) dne 2025-09-24 (9:53).
+
+Další změna 2025-09-24 (10:04).
