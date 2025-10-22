@@ -9,19 +9,33 @@ while (again == "a")
     Console.WriteLine("*******************************");
     Console.WriteLine();
 
-    // Vstup hodnoty do programu - špatně řešený
-    //Console.Write("Zadejte první číslo řady: ");
-    //int first = int.Parse(Console.ReadLine());
+    Console.Write("Zadejte celé číslo - hodnota A: ");
+    int a;
 
-    //Vstup hodnoty do programu - řešený správně
-    Console.Write("Zadejte hodnotu (celé číslo): ");
-    int first;
-
-    while (!int.TryParse(Console.ReadLine(), out first))
+    while (!int.TryParse(Console.ReadLine(), out a))
     {
-        Console.Write("Nezadali jste celé číslo. Zadejte hodnotu znovu: ");
+        Console.Write("Nezadali jste celé číslo. Zadejte hodnotu A znovu: ");
     }
 
+    Console.Write("Zadejte celé číslo - hodnota B: ");
+    int b;
+
+    while (!int.TryParse(Console.ReadLine(), out b))
+    {
+        Console.Write("Nezadali jste celé číslo. Zadejte hodnotu B znovu: ");
+    }
+
+    Console.WriteLine();
+    int pom;
+    if (a > b)
+    {
+        pom = a;
+        a = b;
+        b = pom;
+        Console.WriteLine("Došlo k prohození proměnných");
+    }
+
+    Console.WriteLine($"Seřazená čísla: {a}, {b}");
 
     Console.WriteLine();
     Console.WriteLine("Pro opakování programu stiskněte klávesu a.");
