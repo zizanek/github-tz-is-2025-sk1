@@ -76,6 +76,7 @@ while (again == "a")
         }
     }
 
+
     Console.WriteLine();
     Console.WriteLine("=========================================");
     Console.WriteLine($"Maximum: {max}");
@@ -85,6 +86,54 @@ while (again == "a")
     Console.WriteLine("=========================================");
     Console.WriteLine();
 
+    // Vykreslení přesypacích hodin
+    if (max >= 3)
+    {
+        for (int i = 0; i < max; i++)
+        {
+            int spaces, stars;
+            if (i < max / 2)
+            {
+                spaces = i;
+                // horní polovina - s každým dalším řádkem ubývají dvě hvězdičky (po jedné z každé strany)
+                stars = max - (2 * i);
+            }
+            else
+            {
+                spaces = max - i - 1;
+                if (max % 2 == 1)
+                {
+                    stars = 2 * (i - max / 2) + 1;
+                }
+                else
+                {
+                    stars = stars = 2 * (i - max / 2) + 2;
+                }
+            }
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.BackgroundColor = ConsoleColor.Green;
+            // sp - space
+            for (int sp = 0; sp < spaces; sp++)
+                Console.Write(" ");
+
+            // st - star
+            for (int st = 0; st < stars; st++)
+                Console.Write("*");
+
+            Console.WriteLine();
+            Console.ResetColor();
+        
+        }    
+
+
+
+
+
+    }
+    else
+    {
+        Console.WriteLine("Maximum je menší než 3 => obrazec se nevykreslí");
+    }
 
 
 
