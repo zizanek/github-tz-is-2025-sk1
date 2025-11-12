@@ -50,7 +50,7 @@ while (again == "a")
     Console.WriteLine("Pseudonáhodná čísla:");
     for (int i = 0; i < n ; i++)
     {
-        myRandNumbs[i] = myRandNumb.Next(lowerBound, upperBound);
+        myRandNumbs[i] = myRandNumb.Next(lowerBound, upperBound+1);
         Console.Write("{0}; ", myRandNumbs[i]);
     }
 
