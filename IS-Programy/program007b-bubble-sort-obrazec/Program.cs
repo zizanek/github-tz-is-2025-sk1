@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Linq.Expressions;
 
 string again = "a";
 while (again == "a")
@@ -93,6 +94,28 @@ while (again == "a")
     Console.WriteLine($"Počet porovnání: {compare}");
     Console.WriteLine($"Počet výměn: {change}");
     Console.WriteLine("Čas potřebný na seřazení čísel: {0}", myStopwatch.Elapsed);
+
+
+    // implementace nalezení druhého nejvyššího čísla
+
+    int max = myRandNumbs[0];
+    int secondMax = int.MinValue;
+
+    for (int i = 1; i < n; i++)
+    {
+        if (myRandNumbs[i] < max && secondMax == int.MinValue)
+        {
+            secondMax = myRandNumbs[i];
+           
+        }
+    }
+    Console.WriteLine();
+    Console.WriteLine("================================");
+    Console.WriteLine();
+    Console.WriteLine($"\nDruhé největší číslo: {secondMax}");
+
+    
+
 
     Console.WriteLine();
     Console.WriteLine("Pro opakování programu stiskněte klávesu a.");
