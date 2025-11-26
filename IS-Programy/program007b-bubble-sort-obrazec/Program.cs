@@ -97,11 +97,9 @@ while (again == "a")
 
 
     // implementace nalezení druhého nejvyššího čísla
-
     int max = myRandNumbs[0];
     int secondMax = int.MinValue;
-    //Console.WriteLine($"\nDruhé největší číslo: {secondMax}");
-
+    Console.WriteLine($"\nDruhé největší číslo: {secondMax}");
 
     for (int i = 1; i < n; i++)
     {
@@ -116,8 +114,36 @@ while (again == "a")
     Console.WriteLine();
     Console.WriteLine($"\nDruhé největší číslo: {secondMax}");
 
-    
+    // implementace nalezení i-tého nejvyššího čísla 
+    int iValue = 2;  // třeba druhá největší
 
+    int actualRank = 1;           // 1. největší je první prvek
+    int currentValue = myRandNumbs[0];
+    int ithLargest = 0;              // sem uložíme výsledek
+    bool found = false;              // zatím nenalezeno
+
+    // Procházíme čísla od druhého prvku
+    for (int j = 1; j < n; j++)
+    {
+        // Zjišťujeme, jestli je aktuální hodnota nová a menší
+        // Pokud není menší, je to duplicita => ignorujeme
+        // Pokud je menší, znamená to, že jsme narazili na odlišnou hodnotu a tu si uložíme
+        if (myRandNumbs[j] < currentValue)
+        {
+            currentValue = myRandNumbs[j];
+            actualRank++;
+        }
+
+        // Sledujeme, jestli jsme právě narazili na i-tou hodnotu.
+        // Pokud je to i-tá, nastavíme ji (provede se to pouze jednou).
+        if (actualRank == iValue && found==false)
+        {
+            ithLargest = currentValue;
+            found = true;
+        }
+    }
+
+    Console.WriteLine($"i-tá největší hodnota ({iValue}): {ithLargest}");
 
     Console.WriteLine();
     Console.WriteLine("Pro opakování programu stiskněte klávesu a.");
