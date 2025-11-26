@@ -100,6 +100,8 @@ while (again == "a")
 
     int max = myRandNumbs[0];
     int secondMax = int.MinValue;
+    //Console.WriteLine($"\nDruhé největší číslo: {secondMax}");
+
 
     for (int i = 1; i < n; i++)
     {
