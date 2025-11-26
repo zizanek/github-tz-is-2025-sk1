@@ -115,7 +115,7 @@ while (again == "a")
     Console.WriteLine($"\nDruhé největší číslo: {secondMax}");
 
     // implementace nalezení i-tého nejvyššího čísla 
-    int iValue = 2;  // třeba druhá největší
+    int iValue = 3;  // třeba druhá největší
 
     int actualRank = 1;           // 1. největší je první prvek
     int currentValue = myRandNumbs[0];
@@ -142,11 +142,44 @@ while (again == "a")
             found = true;
         }
     }
+    Console.WriteLine($"i-tá největší hodnota ({iValue}): {ithLargest}\n\n");
 
-    Console.WriteLine($"i-tá největší hodnota ({iValue}): {ithLargest}");
+
+    /* Vykreslení obrazce */
+    int height = ithLargest;
+    int width = ithLargest * 2;
+
+    // 2× horní plný řádek
+    for (int r = 0; r < 2; r++)
+    {
+        for (int i = 0; i < width; i++)
+            Console.Write("*");
+        Console.WriteLine();
+    }
+
+    // vnitřní řádky (výška – 4, protože 2 plné řádky nahoře + 2 dole)
+    for (int i = 0; i < height - 4; i++)
+    {
+        Console.Write("*");                     // levá strana
+
+        for (int j = 0; j < width - 2; j++)     // prázdná mezera
+            Console.Write(" ");
+
+        Console.Write("*");                     // pravá strana
+        Console.WriteLine();
+    }
+
+    // 2× dolní plný řádek
+    for (int r = 0; r < 2; r++)
+    {
+        for (int i = 0; i < width; i++)
+            Console.Write("*");
+        Console.WriteLine();
+    }
+
 
     Console.WriteLine();
     Console.WriteLine("Pro opakování programu stiskněte klávesu a.");
     again = Console.ReadLine();
 
-}
+    }
