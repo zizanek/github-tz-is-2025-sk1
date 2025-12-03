@@ -3,23 +3,16 @@ while (again == "a")
 {
     Console.Clear();
     Console.WriteLine("****************************");
-    Console.WriteLine("***** Název programu *****");
+    Console.WriteLine("***** Výpočet PI *****");
     Console.WriteLine("****************************");
     Console.WriteLine("******* Tomáš Žižka ********");
     Console.WriteLine("****************************");
     Console.WriteLine();
 
-    // Vstup hodnoty do programu - špatně řešený
-    //Console.Write("Zadejte první číslo řady: ");
-    //int first = int.Parse(Console.ReadLine());
-
-    //Vstup hodnoty do programu - řešený správně
-    Console.Write("Zadejte hodnotu (celé číslo): ");
-    int first;
-
-    while (!int.TryParse(Console.ReadLine(), out first))
-    {
-        Console.Write("Nezadali jste celé číslo. Zadejte hodnotu znovu: ");
+    Console.Write("Zadejte přesnost (reálné číslo - čím menší hodnota, tím bude výpočet přesnější): ");
+    double presnost;
+    while(!double.TryParse(Console.ReadLine(), out presnost)) {
+        Console.Write("Nezadali jste reálné číslo, zadejte přesnost znovu: ");
     }
 
     Console.WriteLine();
