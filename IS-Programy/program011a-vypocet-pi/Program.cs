@@ -15,6 +15,10 @@ while (again == "a")
         Console.Write("Nezadali jste reálné číslo, zadejte přesnost znovu: ");
     }
 
+    double i = 1;
+    double znamenko = 1;
+    double piCtvrt = 1;
+
     Console.WriteLine();
     Console.WriteLine("Pro opakování programu stiskněte klávesu a.");
     again = Console.ReadLine();
