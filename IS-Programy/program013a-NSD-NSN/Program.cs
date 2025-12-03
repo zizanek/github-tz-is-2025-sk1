@@ -1,2 +1,18 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿
+string again = "a";
+while (again == "a")
+{
+    Console.Clear();
+
+
+    Console.WriteLine();
+    Console.WriteLine("Pro opakování programu stiskněte klávesu a.");
+    again = Console.ReadLine();
+
+
+}
+
+
+
+
+
