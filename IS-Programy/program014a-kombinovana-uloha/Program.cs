@@ -86,7 +86,27 @@ while (again == "a")
     // -----------------------------------------
     // Seřazení pole - Shaker sort neumím - použiji alespoň bubble sort
     // -----------------------------------------
-
+    for (int i = 0; i < n - 1; i++)
+    {
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            
+            if (numbs[j] < numbs[j + 1])
+            {
+                int tmp = numbs[j + 1];
+                numbs[j + 1] = numbs[j];
+                numbs[j] = tmp;
+            }
+        }
+    }
+    Console.WriteLine();
+    Console.WriteLine();
+    Console.WriteLine("==================================");
+    Console.WriteLine("Seřazená čísla pomocí Bubble sortu: ");
+    for (int i = 0; i < n; i++)
+    {
+        Console.Write("{0}; ", numbs[i]);
+    }
 
     Console.WriteLine();
     Console.WriteLine("Pro opakování programu stiskněte klávesu a.");
