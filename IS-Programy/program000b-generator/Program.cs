@@ -54,7 +54,6 @@ while (again == "a")
         Console.Write("{0}; ", myRandNumbs[i]);
     }
 
-    
     Console.WriteLine();
     Console.WriteLine("Pro opakování programu stiskněte klávesu a.");
     again = Console.ReadLine();
