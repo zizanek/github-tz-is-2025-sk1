@@ -108,6 +108,33 @@ while (again == "a")
         Console.Write("{0}; ", numbs[i]);
     }
 
+    // ------------------------------------
+    // Druhé, třetí, čtvrté největší číslo - řeší správně duplicity
+    // ------------------------------------ 
+    int uniqueCount = 0;
+    int lastValue = int.MinValue;
+    int second = 0, third = 0, fourth = 0;
+    for (int i = 0; i < n; i++) {
+        if (numbs[i] != lastValue)
+        {
+            uniqueCount++;
+            lastValue = numbs[i];
+
+            if (uniqueCount == 2) 
+                second = numbs[i];
+            if (uniqueCount == 3)
+                third = numbs[i];
+            if (uniqueCount == 4)
+                fourth = numbs[i];
+        }
+    }
+
+    Console.WriteLine();
+    Console.WriteLine("==================================");
+    Console.WriteLine("Druhé největší číslo: " + second);
+    Console.WriteLine("Třetí největší číslo: " + third);
+    Console.WriteLine("Čtvrté největší číslo: " + fourth);
+
     Console.WriteLine();
     Console.WriteLine("Pro opakování programu stiskněte klávesu a.");
     again = Console.ReadLine();
