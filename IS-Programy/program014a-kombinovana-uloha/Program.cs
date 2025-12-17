@@ -183,6 +183,7 @@ while (again == "a")
     int smallWidth;
     int indent;
 
+    // počet potřebných mezer pro první a třetí část obrazce
     if (width % 2 == 0)
     {
         smallWidth = 2;
